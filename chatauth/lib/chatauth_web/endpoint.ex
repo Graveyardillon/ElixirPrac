@@ -24,7 +24,7 @@ defmodule ChatauthWeb.Endpoint do
   end
 
   plug Plug.RequestId
-  plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
+  plug Plug.Logger
 
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
@@ -40,7 +40,7 @@ defmodule ChatauthWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_chatauth_key",
-    signing_salt: "QAaF7QMf"
+    signing_salt: "GMWBwkRc"
 
   plug ChatauthWeb.Router
 end

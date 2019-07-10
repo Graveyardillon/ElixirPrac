@@ -1,13 +1,5 @@
 use Mix.Config
 
-# Configure your database
-config :chatauth, Chatauth.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "chatauth_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
-
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :chatauth, ChatauthWeb.Endpoint,
@@ -16,3 +8,11 @@ config :chatauth, ChatauthWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Configure your database
+config :chatauth, Chatauth.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "chatauth_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox

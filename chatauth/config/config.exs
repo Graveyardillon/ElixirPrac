@@ -13,7 +13,7 @@ config :chatauth,
 # Configures the endpoint
 config :chatauth, ChatauthWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "oqc+cI19GtDae6CektADErqaxwXmUzfmAJXUFU496eWzEhQLYU1Y207MASTuTMt7",
+  secret_key_base: "HaymMRWaFdShP7nbDTHHKBFGFnCGg4AUd3g3WgqpLBiuoFjsFgv6j4ubM6b37TqD",
   render_errors: [view: ChatauthWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Chatauth.PubSub, adapter: Phoenix.PubSub.PG2]
 
@@ -25,19 +25,6 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :chatauth, Chatauth.Auth.LoginSessionPipeline,
-  module: Chatauth.Auth.Guardian
-
-config :chatauth, Chatauth.Auth.EnsureAuthPipeline,
-  module:
-
-# guardianDBを使うための設定
-config :guardian, Guardian.DB,
-  repo: Chatauth.Repo,
-  # トークンを管理するテーブル名
-  schema_name: "guardian_tokens",
-  # 期限切れのトークンを削除する処理の実行間隔時間（分）
-  sweep_interval: 60
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
