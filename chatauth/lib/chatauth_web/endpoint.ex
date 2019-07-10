@@ -40,7 +40,7 @@ defmodule ChatauthWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_chatauth_key",
-    signing_salt: "GMWBwkRc"
+    signing_salt: "gqeyYi1v"
 
   plug ChatauthWeb.Router
 end

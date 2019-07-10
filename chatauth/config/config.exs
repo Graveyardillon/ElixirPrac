@@ -13,7 +13,7 @@ config :chatauth,
 # Configures the endpoint
 config :chatauth, ChatauthWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "HaymMRWaFdShP7nbDTHHKBFGFnCGg4AUd3g3WgqpLBiuoFjsFgv6j4ubM6b37TqD",
+  secret_key_base: "NkYMpmGY+/vfo6L9FgWS66Z4CzgauNrb21xfiYcxEcYfln4JOyvY8ngptnteyhTG",
   render_errors: [view: ChatauthWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Chatauth.PubSub, adapter: Phoenix.PubSub.PG2]
 

@@ -9,7 +9,7 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
 config :chatauth, ChatauthWeb.Endpoint,
-  secret_key_base: "JoyMepTm7J0Gj4qEJNK+SPKXPcYJWNTsEy4hDlNVLizNZyuw891lTt16noycebRj"
+  secret_key_base: "C0LPT34e/TqeGQ6ljbgb4nJBWW5MaH6UNNaYjSiFnb7KkHVGrzfbhH8LfzpBRLiO"
 
 # Configure your database
 config :chatauth, Chatauth.Repo,
