@@ -1,12 +1,13 @@
 defmodule Chatauth.Blog.Article do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Chatauth.Accounts.User
 
   schema "articles" do
     field :content, :string
     field :title, :string
-    field :user_id, :id
 
+    belongs_to :user, User
     timestamps()
   end
 

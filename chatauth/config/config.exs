@@ -17,6 +17,10 @@ config :chatauth, ChatauthWeb.Endpoint,
   render_errors: [view: ChatauthWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Chatauth.PubSub, adapter: Phoenix.PubSub.PG2]
 
+config :chatauth, Chatauth.Accounts.Guardian,
+  issuer: "chatauth",
+  secret_key: "nxJWBOc1x93uRvDTCdvIvD/6kvh3m6008Zwa7sWLuq+/wmjuWZ85c60oGVvUkK07"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
