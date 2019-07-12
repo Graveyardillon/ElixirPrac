@@ -16,6 +16,11 @@
       <li>
         <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
       </li>
+      <li>
+        <%= link to: "/signin" do %>
+          signin
+        <%= end %>
+      </li>
     </ul>
   </article>
   <article class="column">
