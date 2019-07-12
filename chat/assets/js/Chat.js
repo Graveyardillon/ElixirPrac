@@ -114,7 +114,8 @@ class Chat extends React.Component {
        form_jsx = (
         <form onSubmit={this.handleJoin.bind(this)} >
           <label>ユーザ名を指定してJoin</label>&nbsp;&nbsp;&nbsp;&nbsp;
-          <TextField hintText="ユーザ名" value = {this.state.inputUser} onChange = {this.handleInputUser.bind(this)} />&nbsp;&nbsp;&nbsp;&nbsp;
+          <TextField hintText="ユーザ名" value = {this.state.inputUser}
+           onChange = {this.handleInputUser.bind(this)} />&nbsp;&nbsp;&nbsp;&nbsp;
           <RaisedButton type="submit" primary={true} label="Join" />
         </form>
        );
@@ -132,7 +133,7 @@ class Chat extends React.Component {
                </form>
              </div>
            </Paper>
-           <Paper  style={style1}>
+           <Paper style={style1}>
              <form onSubmit={this.handleSubmit.bind(this)}>
                <label>チャット</label>&nbsp;&nbsp;&nbsp;&nbsp;
                <TextField hintText="Chat Text" value = {this.state.inputMessage} onChange = {this.handleInputMessage.bind(this)} />&nbsp;&nbsp;&nbsp;&nbsp;
